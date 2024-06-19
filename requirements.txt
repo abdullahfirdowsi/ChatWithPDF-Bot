@@ -1,0 +1,12 @@
+streamlit
+pymupdf
+transformers
+keybert
+deep-translator
+fpdf
+fpdf2
+pdfkit
+httpx==0.13.3
+googletrans==4.0.0rc1
+torch
+sentencepiece
