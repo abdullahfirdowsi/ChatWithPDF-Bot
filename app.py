@@ -104,7 +104,7 @@ def get_download_link(file_path, text):
 # st.sidebar.title("PDF Bot")
 # option = st.sidebar.selectbox("Choose an option", ("PDF Summarizer", "PDF Translator", "ChatWithPDF-Bot"))
 
-# uploaded_file = st.file_uploader("Upload a PDF file less than 12 MB", type=["pdf"])
+# uploaded_file = st.file_uploader("Upload a PDF file less than 200 MB", type=["pdf"])
 
 # Streamlit sidebar
 
@@ -113,7 +113,7 @@ st.set_page_config(layout="wide", page_title="ChatWithPDF - Bot", page_icon=":ro
 st.sidebar.title("PDF analysis feature")
 option = st.sidebar.selectbox("Choose an option", ("PDF Summarizer", "PDF Translator", "ChatWithPDF-Bot"))
 
-uploaded_file = st.file_uploader("Upload a PDF file less than 12 MB", type=["pdf"])
+uploaded_file = st.file_uploader("Upload a PDF file less than 200 MB", type=["pdf"])
 
 if uploaded_file:
     with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp_file:
