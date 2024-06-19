@@ -24,7 +24,7 @@ def load_summarizer():
     return pipeline("summarization", model="facebook/bart-large-cnn")
 
 def summarize_text(text, summarizer):
-    summary = summarizer(text, max_length=150, min_length=40, do_sample=False)
+    summary = summarizer(text, max_length=1500, min_length=10, do_sample=False)
     return summary[0]['summary_text']
 
 # Function to translate the document to a selected language
