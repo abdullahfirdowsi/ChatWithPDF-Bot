@@ -100,7 +100,20 @@ def get_download_link(file_path, text):
     href = f'<a href="data:text/plain;charset=utf-8,{data}" download="{file_path}">{text}</a>'
     return href
 
+# # Streamlit sidebar
+# st.sidebar.title("PDF Bot")
+# option = st.sidebar.selectbox("Choose an option", ("PDF Summarizer", "PDF Translator", "ChatWithPDF-Bot"))
+
+# uploaded_file = st.file_uploader("Upload a PDF file less than 12 MB", type=["pdf"])
+
 # Streamlit sidebar
+
+st.set_page_config(layout="wide", page_title="PDF Bot", page_icon=":robot:")
+st.set_option('theme.primaryColor', '#000000')
+st.set_option('theme.backgroundColor', '#ffffff')
+st.set_option('theme.secondaryBackgroundColor', '#f0f0f0')
+st.set_option('theme.textColor', '#333333')
+
 st.sidebar.title("PDF Bot")
 option = st.sidebar.selectbox("Choose an option", ("PDF Summarizer", "PDF Translator", "ChatWithPDF-Bot"))
 
