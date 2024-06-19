@@ -1,5 +1,3 @@
-
-
 import streamlit as st
 import fitz  # PyMuPDF
 from transformers import pipeline, AutoTokenizer, AutoModelForSeq2SeqLM
@@ -103,8 +101,8 @@ def get_download_link(file_path, text):
     return href
 
 # Streamlit sidebar
-st.sidebar.title("PDF Processing App")
-option = st.sidebar.selectbox("Choose an option", ("Summarizer", "Translator", "Question Answering Bot"))
+st.sidebar.title("PDF Bot")
+option = st.sidebar.selectbox("Choose an option", ("PDF Summarizer", "PDF Translator", "ChatWithPDF-Bot"))
 
 uploaded_file = st.file_uploader("Upload a PDF file less than 12 MB", type=["pdf"])
 
