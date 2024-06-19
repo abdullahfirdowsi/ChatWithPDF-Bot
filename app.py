@@ -139,12 +139,9 @@ if uploaded_file:
     elif option == "PDF Translator":
         st.header("Translate Document")
         languages = {
-            "English": "en", "Hindi": "hi", "French": "fr", "German": "de", "Spanish": "es",
+            "English": "en", "Tamil": "ta", "Hindi": "hi", "French": "fr", "German": "de", "Spanish": "es",
             "Italian": "it", "Portuguese": "pt", "Russian": "ru", "Chinese": "zh", "Japanese": "ja",
-            "Arabic": "ar", "Korean": "ko", "Turkish": "tr", "Dutch": "nl", "Swedish": "sv",
-            "Polish": "pl", "Vietnamese": "vi", "Finnish": "fi", "Norwegian": "no", "Danish": "da",
-            "Czech": "cs", "Greek": "el", "Thai": "th", "Romanian": "ro", "Hungarian": "hu",
-            "Indonesian": "id", "Hebrew": "he"
+            "Arabic": "ar", "Korean": "ko", "Greek": "el", "Thai": "th", "Romanian": "ro", "Indonesian": "id", "Hebrew": "he"
         }
 
         target_language = st.selectbox("Select target language", list(languages.keys()))
