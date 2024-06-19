@@ -111,7 +111,7 @@ def get_download_link(file_path, text):
 st.set_page_config(layout="wide", page_title="ChatWithPDF - Bot", page_icon=":robot:")
 
 st.sidebar.title("PDF analysis feature")
-option = st.sidebar.selectbox("Choose an option", ("PDF Summarizer", "PDF Translator", "ChatWithPDF-Bot"))
+option = st.sidebar.selectbox("Choose an option", ("PDF Summarizer", "PDF Translator", "ChatWithPDF - QA Bot"))
 
 uploaded_file = st.file_uploader("Upload a PDF file less than 200 MB", type=["pdf"])
 
@@ -122,7 +122,7 @@ if uploaded_file:
 
     document = extract_text_from_pdf(tmp_file_path)
 
-    if option == "Summarizer":
+    if option == "PDF Summarizer":
         st.header("Summarized Content")
         summarizer = load_summarizer()
         summary = summarize_text(document, summarizer)
@@ -136,7 +136,7 @@ if uploaded_file:
         with open(output_pdf_path, "rb") as f:
             st.download_button("Download Summarized PDF", f, file_name=output_pdf_path, mime="application/pdf")
     
-    elif option == "Translator":
+    elif option == "PDF Translator":
         st.header("Translate Document")
         languages = {
             "English": "en", "Hindi": "hi", "French": "fr", "German": "de", "Spanish": "es",
@@ -162,8 +162,8 @@ if uploaded_file:
             with open(output_text_path, "rb") as f:
                 st.download_button("Download Translated Text", f, file_name=output_text_path, mime="text/plain")
     
-    elif option == "Question Answering Bot":
-        st.header("Question Answering Bot")
+    elif option == "ChatWithPDF - QA Bot":
+        st.header("ChatWithPDF - Question Answering Bot")
         question = st.text_input("Ask a question about the document:")
         if question:
             qa_model = load_qa_model()
